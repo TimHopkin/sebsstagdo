@@ -133,65 +133,11 @@ const App: React.FC = () => {
       <section id="dress-code" className="py-24 container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div className="order-2 md:order-1">
-             <a
-               href="https://www.theguardian.com/books/2016/feb/20/john-le-carre-the-night-manager-television-adaptation"
-               target="_blank"
-               rel="noopener noreferrer"
-               className="block group"
-             >
-               <div className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-lg shadow-2xl overflow-hidden border-2 border-amber-900/30 hover:border-amber-600 transition-all duration-500 hover:shadow-amber-900/30 hover:scale-[1.02]">
-                 {/* Background texture */}
-                 <div className="absolute inset-0 opacity-10" style={{backgroundImage: "url('data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d97706' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"}}></div>
-
-                 <div className="relative p-8">
-                   {/* Classification stamp */}
-                   <div className="absolute top-4 right-4 rotate-12 opacity-40 group-hover:opacity-70 transition-opacity">
-                     <div className="border-4 border-red-600 rounded px-3 py-1">
-                       <span className="text-red-600 font-bold text-xs tracking-[0.3em]">CLASSIFIED</span>
-                     </div>
-                   </div>
-
-                   {/* Content */}
-                   <div className="space-y-4">
-                     <div className="flex items-center gap-3 mb-6">
-                       <div className="w-12 h-12 rounded-full bg-amber-900/30 flex items-center justify-center border border-amber-600/50">
-                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-amber-500">
-                           <circle cx="12" cy="12" r="10"></circle>
-                           <circle cx="12" cy="12" r="6"></circle>
-                           <circle cx="12" cy="12" r="2"></circle>
-                         </svg>
-                       </div>
-                       <div>
-                         <div className="text-[10px] uppercase tracking-[0.3em] text-amber-500/70 font-bold">Intelligence Brief</div>
-                         <div className="text-xs text-slate-500 uppercase tracking-widest">The Guardian</div>
-                       </div>
-                     </div>
-
-                     <h3 className="text-2xl font-bold text-amber-500 group-hover:text-amber-400 transition-colors leading-tight">
-                       John le Carré's<br />The Night Manager
-                     </h3>
-
-                     <p className="text-slate-300 text-sm leading-relaxed">
-                       The definitive guide to the television adaptation that inspired this operation. Essential reading for all operatives.
-                     </p>
-
-                     <div className="pt-4 flex items-center justify-between border-t border-slate-700/50">
-                       <div className="text-xs text-slate-500 uppercase tracking-widest">Required Reading</div>
-                       <div className="flex items-center gap-2 text-amber-500 group-hover:gap-3 transition-all">
-                         <span className="text-xs uppercase tracking-widest font-bold">Access File</span>
-                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                           <line x1="5" y1="12" x2="19" y2="12"></line>
-                           <polyline points="12 5 19 12 12 19"></polyline>
-                         </svg>
-                       </div>
-                     </div>
-                   </div>
-                 </div>
-
-                 {/* Hover effect overlay */}
-                 <div className="absolute inset-0 bg-gradient-to-t from-amber-900/0 to-amber-900/0 group-hover:from-amber-900/10 group-hover:to-transparent transition-all duration-500"></div>
-               </div>
-             </a>
+            <img
+              src="/night-manager-cast.png"
+              alt="The Night Manager Cast"
+              className="w-full h-auto rounded-lg shadow-2xl border-2 border-amber-900/30"
+            />
           </div>
           <div className="order-1 md:order-2">
             <h2 className="text-4xl font-bold mb-8">
