@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#020617;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+
+  <!-- Decorative elements -->
+  <circle cx="100" cy="100" r="150" fill="#d97706" opacity="0.05"/>
+  <circle cx="1100" cy="530" r="200" fill="#fbbf24" opacity="0.05"/>
+
+  <!-- Top classification bar -->
+  <rect x="0" y="40" width="1200" height="2" fill="url(#goldGradient)" opacity="0.3"/>
+  <text x="60" y="80" font-family="'Cinzel', serif" font-size="20" fill="#d97706" letter-spacing="8" font-weight="bold">CLASSIFIED :: EYES ONLY</text>
+
+  <!-- Main title -->
+  <text x="600" y="260" font-family="'Cinzel', serif" font-size="90" fill="#f8fafc" text-anchor="middle" font-weight="bold" filter="url(#glow)">SEB'S</text>
+  <text x="600" y="360" font-family="'Cinzel', serif" font-size="110" fill="url(#goldGradient)" text-anchor="middle" font-weight="bold" filter="url(#glow)">STAG DO</text>
+
+  <!-- Subtitle -->
+  <text x="600" y="430" font-family="'Playfair Display', serif" font-size="32" fill="#cbd5e1" text-anchor="middle" font-style="italic">"The Night Manager Operation"</text>
+
+  <!-- Details -->
+  <text x="600" y="510" font-family="'Montserrat', sans-serif" font-size="26" fill="#d97706" text-anchor="middle" letter-spacing="6" font-weight="600">21ST MARCH 2026 :: LONDON</text>
+
+  <!-- Bottom classification bar -->
+  <rect x="0" y="588" width="1200" height="2" fill="url(#goldGradient)" opacity="0.3"/>
+
+  <!-- Target crosshair decoration -->
+  <g opacity="0.15">
+    <circle cx="1050" cy="150" r="80" fill="none" stroke="#d97706" stroke-width="3"/>
+    <circle cx="1050" cy="150" r="60" fill="none" stroke="#d97706" stroke-width="2"/>
+    <circle cx="1050" cy="150" r="40" fill="none" stroke="#d97706" stroke-width="2"/>
+    <line x1="1050" y1="70" x2="1050" y2="110" stroke="#d97706" stroke-width="2"/>
+    <line x1="1050" y1="190" x2="1050" y2="230" stroke="#d97706" stroke-width="2"/>
+    <line x1="970" y1="150" x2="1010" y2="150" stroke="#d97706" stroke-width="2"/>
+    <line x1="1090" y1="150" x2="1130" y2="150" stroke="#d97706" stroke-width="2"/>
+  </g>
+</svg>
