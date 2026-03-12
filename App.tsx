@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import { EVENT_DATE, EVENT_LOCATION, THEME, ITINERARY, DRESS_CODE_TIPS } from './constants';
+import { EVENT_DATE, EVENT_LOCATION, THEME, ITINERARY, DRESS_CODE_TIPS, BUDGET_NOTES } from './constants';
 import AliasGenerator from './components/AliasGenerator';
 
 const App: React.FC = () => {
@@ -54,18 +54,18 @@ const App: React.FC = () => {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://picsum.photos/id/122/1920/1080?grayscale&blur=2" 
-            alt="London Background" 
+          <img
+            src="https://picsum.photos/id/122/1920/1080?grayscale&blur=2"
+            alt="London Background"
             className="w-full h-full object-cover opacity-40"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent"></div>
         </div>
-        
+
         <div className="relative z-10 text-center px-6">
           <h2 className="text-amber-500 tracking-[0.5em] uppercase text-sm mb-6 animate-pulse">Eyes Only</h2>
           <h1 className="text-6xl md:text-8xl font-bold mb-4 tracking-tighter leading-none">
-            SEB'S <br/> <span className="text-amber-600">STAG DO</span>
+            SEB'S <br /> <span className="text-amber-600">STAG DO</span>
           </h1>
           <div className="serif-text text-xl md:text-2xl italic text-slate-300 max-w-2xl mx-auto mb-12">
             "The world is a very dangerous place, Seb. One must be prepared."
@@ -76,7 +76,7 @@ const App: React.FC = () => {
             <div>{EVENT_LOCATION}</div>
           </div>
         </div>
-        
+
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center">
           <div className="text-[10px] uppercase tracking-widest text-slate-500 mb-2">Scroll to Declassify</div>
           <div className="w-px h-12 bg-gradient-to-b from-amber-500 to-transparent"></div>
@@ -92,13 +92,19 @@ const App: React.FC = () => {
             </h2>
             <div className="space-y-6 text-slate-300 leading-relaxed text-lg">
               <p>
-                Ladies and Gentlemen, you are invited to a high-stakes weekend in the heart of London. We are operating under the cover of a celebration, but the objective remains clear: honor the groom-to-be, Seb, with a standard of luxury and sophistication rarely seen outside the Balearic islands.
+                The game plan is locked in. <strong className="text-amber-500">Night Manager theme incoming 🕶️🥂</strong>
               </p>
               <p>
-                The theme for the operation is <strong className="text-amber-500">"The Night Manager"</strong>. Think Richard Roper’s inner circle—international, dangerous, and impeccably dressed.
+                We kick off with wine tasting at Hugo's place — Hugo's playing our very own <strong className="text-amber-500">Angela Burr</strong>, so expect top-shelf bottles and zero mercy if you guess the grape wrong 🍷
+              </p>
+              <p>
+                Then we roll to <strong className="text-amber-500">The Hero</strong> for a proper special dinner. Order whatever you fancy.
+              </p>
+              <p>
+                After that… <strong className="text-amber-500">full Night Manager mode</strong>. Sharp suits, fancy shirts, dress to impress (or at least look like you've got a shady offshore account). We're hitting the town.
               </p>
               <div className="bg-amber-900/10 border-l-4 border-amber-600 p-6 mt-8 italic">
-                "We are all looking for something. You’ve found the best party in London."
+                "Seb — no escaping this one, mate. Let's make it legendary. 🥳"
               </div>
             </div>
           </div>
@@ -159,10 +165,31 @@ const App: React.FC = () => {
               <div className="mt-12 p-6 bg-slate-900 border border-amber-900/30 rounded">
                 <p className="text-xs text-amber-500 uppercase tracking-widest font-bold mb-2">Note for London Weather</p>
                 <p className="text-xs text-slate-400 italic">
-                  Since it's London in March, feel free to layer with a charcoal overcoat or a structured trench. The core outfit must remain Roper-certified.
+                  April in London — layer with a charcoal overcoat or a structured trench if needed. The core outfit must remain Roper-certified.
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Budget Section */}
+      <section className="py-16 container mx-auto px-6">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold mb-10 text-center">
+            <span className="text-amber-600 mr-4">04.</span> THE BUDGET
+          </h2>
+          <div className="grid md:grid-cols-3 gap-4">
+            {BUDGET_NOTES.map((note, i) => (
+              <div key={i} className="p-6 bg-slate-900 border border-amber-900/30 rounded-lg">
+                <span className="text-amber-500 text-2xl font-bold block mb-3">{'💰'[i] ?? '✦'}</span>
+                <p className="text-slate-300 text-sm tracking-wide">{note}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-8 p-6 bg-amber-900/10 border border-amber-600/30 rounded-lg text-center">
+            <p className="text-amber-500 font-bold uppercase tracking-widest text-sm mb-2">Dietary Requirements</p>
+            <p className="text-slate-400 text-sm italic">Let us know ASAP if you've got any dietary stuff for dinner.</p>
           </div>
         </div>
       </section>
@@ -171,8 +198,8 @@ const App: React.FC = () => {
       <section id="rsvp" className="py-24 bg-gradient-to-b from-slate-900 to-slate-950 text-center px-6">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-4xl font-bold mb-6 uppercase tracking-widest">Confirm Your Deployment</h2>
-          <p className="text-slate-400 mb-12">Please provide your attendance status by January 1st, 2026. Non-compliance will result in immediate extraction from the operation.</p>
-          
+          <p className="text-slate-400 mb-12">Drop a 💪 or 🥂 — let us know ASAP if you're in. Non-compliance will result in immediate extraction from the operation.</p>
+
           {!rsvpStatus ? (
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
               <button
@@ -212,7 +239,7 @@ const App: React.FC = () => {
           <div className="pt-24 border-t border-slate-800">
             <div className="text-[10px] text-slate-600 uppercase tracking-[0.5em] mb-4">Official Document 2026-STAG-SEB</div>
             <div className="text-amber-900/40 font-bold text-6xl opacity-10 uppercase absolute left-0 right-0 -z-10 select-none">TOP SECRET</div>
-            <div className="text-slate-500 text-xs">London | March 21, 2026 | No Records Found</div>
+            <div className="text-slate-500 text-xs">London | Saturday 11th April 2026 | No Records Found</div>
           </div>
         </div>
       </section>
@@ -220,7 +247,7 @@ const App: React.FC = () => {
       {/* Floating Action Button for Mobile RSVP */}
       <div className="md:hidden fixed bottom-6 right-6 z-50">
         <a href="#rsvp" className="bg-amber-600 w-14 h-14 rounded-full flex items-center justify-center shadow-2xl border border-amber-400">
-           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white"><path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white"><path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z" /></svg>
         </a>
       </div>
     </div>
